@@ -7,12 +7,12 @@
  *
  * @author awadb3223
  */
-public class OrderedList {
+public class A5Q1 {
 
     private MyIntNode head;
     private int numItems;
 
-    public OrderedList() {
+    public A5Q1() {
         head = null;
         numItems = 0;
     }
@@ -25,20 +25,23 @@ public class OrderedList {
             MyIntNode temp = new MyIntNode(num);
             head = temp;
         } else {
-            // travel to the end
-            while (node.getNext() != null) {
-                node = node.getNext();
+            // go through list and compare values
+            for (int i = 0; i < num; i++) {
+
             }
-            // node is the last node
-            // create the new node
-            MyIntNode temp = new MyIntNode(num);
-            // insert it into the list
-            node.setNext(temp);
         }
         // increse the size counter
         numItems++;
     }
-    
+
+    // remove a specific number from the list
+    public void remove(int num) {
+        MyIntNode node = head;
+        // look for number
+        for (int i = 0; i < node.getNum(); i++) {
+            
+        }
+    }
 
     public int size() {
         return numItems;
@@ -48,10 +51,10 @@ public class OrderedList {
         return numItems == 0;
     }
 
-    public int get(int position) {
+    public int get(int index) {
         MyIntNode node = head;
         // move the number of times
-        for (int i = 0; i < position; i++) {
+        for (int i = 0; i < index; i++) {
             node = node.getNext();
         }
         return node.getNum();
